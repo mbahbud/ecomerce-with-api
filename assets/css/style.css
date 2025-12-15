@@ -1,0 +1,306 @@
+/* Custom CSS for E-Commerce */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    height: 200px;
+    object-fit: cover;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.badge-stock {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.cart-item {
+    border-bottom: 1px solid #dee2e6;
+    padding: 15px 0;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.order-status {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.status-pending {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.status-processing {
+    background-color: #0dcaf0;
+    color: #000;
+}
+
+.status-shipped {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.status-delivered {
+    background-color: #198754;
+    color: #fff;
+}
+
+.status-cancelled {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 0;
+    margin-bottom: 40px;
+}
+
+.quantity-input {
+    width: 80px;
+    text-align: center;
+}
+
+.btn-quantity {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.admin-sidebar {
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 56px);
+    padding: 20px;
+}
+
+.admin-sidebar .nav-link {
+    color: #333;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.stats-card {
+    border-left: 4px solid #0d6efd;
+}
+
+.table-actions {
+    white-space: nowrap;
+}
+
+.product-detail-image {
+    max-height: 500px;
+    object-fit: contain;
+}
+
+/* ========================================
+   ⭐ PAYMENT & TRACKING STYLES (NEW)
+   ======================================== */
+
+/* Payment Status Badges */
+.payment-status {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.payment-unpaid {
+    background-color: #dc3545;
+    color: white;
+}
+
+.payment-pending {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.payment-verified {
+    background-color: #198754;
+    color: white;
+}
+
+.payment-rejected {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Tracking Timeline */
+.tracking-timeline {
+    position: relative;
+    padding-left: 40px;
+    margin-top: 20px;
+}
+
+.tracking-timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #0d6efd 0%, #dee2e6 100%);
+}
+
+.tracking-item {
+    position: relative;
+    padding-bottom: 30px;
+    min-height: 80px;
+}
+
+.tracking-item::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 4px solid #dee2e6;
+    z-index: 1;
+}
+
+.tracking-item.active::before {
+    border-color: #0d6efd;
+    background: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.2);
+}
+
+.tracking-item.completed::before {
+    border-color: #198754;
+    background: #198754;
+}
+
+.tracking-item:last-child {
+    padding-bottom: 0;
+}
+
+.tracking-item h6 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.tracking-item p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+/* Bank Account Cards */
+.card.border-primary {
+    border-width: 2px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.border-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2);
+}
+
+/* Payment Proof Preview */
+.payment-proof-preview {
+    max-width: 400px;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px;
+    background: #f8f9fa;
+}
+
+/* Shipping Status Colors */
+.badge.bg-processing {
+    background-color: #ffc107 !important;
+}
+
+.badge.bg-picked-up {
+    background-color: #17a2b8 !important;
+}
+
+.badge.bg-in-transit {
+    background-color: #0d6efd !important;
+}
+
+.badge.bg-out-for-delivery {
+    background-color: #198754 !important;
+}
+
+.badge.bg-delivered {
+    background-color: #343a40 !important;
+}
+
+/* Admin Sidebar Badge */
+.admin-sidebar .nav-link .badge {
+    float: right;
+    margin-top: 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-image {
+        height: 150px;
+    }
+    
+    .hero-section {
+        padding: 40px 0;
+    }
+    
+    .tracking-timeline {
+        padding-left: 30px;
+    }
+    
+    .tracking-timeline::before {
+        left: 8px;
+    }
+    
+    .tracking-item::before {
+        left: -24px;
+        width: 16px;
+        height: 16px;
+    }
+    
+    .payment-status {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+}
